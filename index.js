@@ -20,11 +20,24 @@ document.getElementById("btn").onclick = function() {
     } else {
         return false;
     }
-    
+
     // 残業加算した月労働時間
     let total_time = input["regular"] * input["days_worked"] + input["overtime"];
     output = Math.round(total_salary / total_time);
-    console.log(output);
+
+    // 出力
+    // output(output);
+    div = document.getElementById("output");
+    div.innerHTML = "";
+    div.innerHTML = "あなたの時給は...<br><strong>" + output + "円</strong>　です！";
+    div.style.display = "block";
+    
 }
 
 // 出力
+function output(num) {
+    div = document.getElementById("output");
+    // div.innerHTML = "";
+    div.innerHTML = "あなたの時給は...<br><strong>" + num + "円</strong>　です！";
+    div.style.display = "block";
+}
