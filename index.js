@@ -31,6 +31,9 @@ document.getElementById("btn").onclick = function() {
     div.innerHTML = "";
     div.innerHTML = "あなたの時給は...<br><strong>" + output + "円</strong>　です！";
     div.style.display = "block";    
+
+    // ツイートボタン表示
+    document.getElementById("tweet").style.display = "block";
 }
 
 // ツイートボタン押下時にテキストを動的に変更してツイート

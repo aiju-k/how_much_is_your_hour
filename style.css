@@ -15,6 +15,17 @@ div.calc_btn {
     text-align: center;
 }
 
+div.calc_btn button {
+    font-family: serif;
+    border: none;
+    font-size: 26px;
+    background-color: #f2841d;
+    padding: 6px 16px;
+    border-radius: 100vh;
+    color: white;
+    cursor: pointer;
+}
+
 div.output {
     display: none;
     text-align: center;
@@ -26,7 +37,7 @@ strong {
 }
 
 div.tweet {
-    /* display: none; */
+    display: none;
     text-align: center;
 }
 
@@ -36,7 +47,7 @@ div.tweet button {
     border: none;
     font-size: 26px;
     background-color: #1DA1F2;
-    padding: 10px 20px;
+    padding: 6px 16px;
     border-radius: 100vh;
     color: white;
     cursor: pointer;
