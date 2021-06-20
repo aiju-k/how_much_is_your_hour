@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How Much is Your 1 Hour</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
     <div class="title">
@@ -50,13 +51,16 @@
 
     <!-- 出力結果 -->
     <div class="output" id="output">
-        <p>
-            あなたの時給は...
-            <br>
-            <strong>1000円</strong>　です
-        </p>
+        <!-- ここに結果表示 -->
     </div>
 
+    <!-- ツイートボタン -->
+    <div class="tweet" id="tweet">
+        <button id="twitter-share-button"><i class="fab fa-twitter"></i>ツイートする</button>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+        
     <br>
     <br>
     <hr>

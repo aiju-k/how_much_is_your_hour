@@ -30,14 +30,23 @@ document.getElementById("btn").onclick = function() {
     div = document.getElementById("output");
     div.innerHTML = "";
     div.innerHTML = "あなたの時給は...<br><strong>" + output + "円</strong>　です！";
-    div.style.display = "block";
-    
+    div.style.display = "block";    
 }
 
-// 出力
-function output(num) {
-    div = document.getElementById("output");
-    // div.innerHTML = "";
-    div.innerHTML = "あなたの時給は...<br><strong>" + num + "円</strong>　です！";
-    div.style.display = "block";
+// ツイートボタン押下時にテキストを動的に変更してツイート
+document.getElementById("twitter-share-button").onclick = function() {
+    // 出力結果を取得
+    let text = document.getElementById("output").innerHTML;
+
+    // HTMLタグを、改行は変換、その他は削除
+    text = text.replace(/<br>/, "%0D%0A", /<strong>/, "");
+    text = text.replace(/<strong>/, "");
+    text = text.replace(/<\/strong>/, "");
+
+    // オプションパラメータを設定
+    let hashtags = "あなたの時給";
+    let url = encodeURIComponent(location.href)  // location.hrefは今いるURL
+
+    // 遷移
+    window.open("https://twitter.com/share?text=" + text + "&hashtags=" + hashtags + "&url=" + url);
 }
