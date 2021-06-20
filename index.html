@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much is Your 1 Hour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+        <h1>あなたの時給はいくら？</h1>
+    </div>
+
+    <!-- 入力項目 -->
+    <div class="input">
+        <ul>
+            <li>
+                <select>
+                    <option value="month">月給</option>
+                    <option value="year">年収</option>
+                </select>
+                ：
+                <input type="text" id="salary" name="salary">円
+            </li>
+            <li>
+                <label for="bonus">ボーナス：</label>
+                <input type="text" id="bonus" name="bonus">円
+            </li>
+            <li>
+                <label for="regular">定時の労働時間：</label>
+                <input type="text" id="regular" name="regular">時間
+            </li>
+            <li>
+                <label for="overtime">月残業時間：</label>
+                <input type="text" id="overtime" name="overtime">時間
+            </li>
+            <li>
+                <label for="days_worked">月出勤日数：</label>
+                <input type="text" id="days_worked" name="days_worked">時間
+            </li>
+        </ul>
+    </div>
+
+    <!-- 出力ボタン -->
+    <div class="calc_btn">
+        <button>計算する</button>
+    </div>
+
+
+    <!-- 出力結果 -->
+    <div class="output">
+        あなたの時給は...
+        <br>
+        <strong>1000円</strong>　です
+    </div>
+
+    <br>
+    <br>
+    <hr>
+
+    <div class="footer">
+        All rights reserved.
+    </div>
+
+</body>
+</html>
