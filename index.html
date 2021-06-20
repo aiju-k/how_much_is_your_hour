@@ -16,7 +16,7 @@
     <div class="input">
         <ul>
             <li>
-                <select>
+                <select id="month_or_year">
                     <option value="month">月給</option>
                     <option value="year">年収</option>
                 </select>
@@ -24,7 +24,7 @@
                 <input type="text" id="salary" name="salary">円
             </li>
             <li>
-                <label for="bonus">ボーナス：</label>
+                <label for="bonus">ボーナス総額：</label>
                 <input type="text" id="bonus" name="bonus">円
             </li>
             <li>
@@ -37,22 +37,24 @@
             </li>
             <li>
                 <label for="days_worked">月出勤日数：</label>
-                <input type="text" id="days_worked" name="days_worked">時間
+                <input type="text" id="days_worked" name="days_worked">日
             </li>
         </ul>
     </div>
 
     <!-- 出力ボタン -->
     <div class="calc_btn">
-        <button>計算する</button>
+        <button id="btn">計算する</button>
     </div>
 
 
     <!-- 出力結果 -->
-    <div class="output">
-        あなたの時給は...
-        <br>
-        <strong>1000円</strong>　です
+    <div class="output" id="output">
+        <p>
+            あなたの時給は...
+            <br>
+            <strong>1000円</strong>　です
+        </p>
     </div>
 
     <br>
@@ -63,5 +65,6 @@
         All rights reserved.
     </div>
 
+    <script src="index.js"></script>
 </body>
 </html>
