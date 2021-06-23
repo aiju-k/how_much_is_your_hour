@@ -1,14 +1,63 @@
 /* サイト全体の設定 */
 body {
-    font-family: serif;
+    font-family: 'arial', sans-serif;
     width: 400px;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
+    color: #333;
 }
 
 div {
     margin-bottom: 30px;
+}
+
+div.title h1 {
+    text-align: center;
+}
+
+ul{
+    counter-reset:list;
+    list-style-type:none;
+    font: 14px/1.6 'arial narrow', sans-serif;
+    padding:0;
+}
+ul li{
+position:relative;
+padding: 0 0 0 20px;
+margin: 7px 0 7px 0px;
+font-weight: bold;
+font-size:14px;
+line-height: 30px;
+border-bottom: dashed 1px #F6A38B;
+}
+ul li:before{
+counter-increment: list;
+content: "";
+display: block;
+position: absolute;
+left: 0px;
+height: 10px;
+width: 10px;
+border-radius: 50%;
+background: #F6A38B;
+top: 50%;
+-moz-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+li input[type="text"] {
+    border: none;
+    border-bottom: 1.5px solid #333;
+}
+
+li input[type="text"]:forcus {
+    border: none;
+    border-bottom: solid #333;
+    outline: 0;
 }
 
 div.calc_btn {
@@ -16,10 +65,10 @@ div.calc_btn {
 }
 
 div.calc_btn button {
-    font-family: serif;
+    /* font-family: serif; */
     border: none;
     font-size: 26px;
-    background-color: #f2841d;
+    background-color: #fa7c59;
     padding: 6px 16px;
     border-radius: 100vh;
     color: white;
@@ -27,22 +76,23 @@ div.calc_btn button {
 }
 
 div.output {
-    display: none;
+    /* display: none; */
     text-align: center;
     font-size: 40px;
 }
 
 strong {
-    color: red;
+    color: #fa6c59;
+    text-decoration: underline;
 }
 
 div.tweet {
-    display: none;
+    /* display: none; */
     text-align: center;
 }
 
 div.tweet button {
-    font-family: serif;
+    /* font-family: serif; */
     text-align: end;
     border: none;
     font-size: 26px;
@@ -60,4 +110,13 @@ i.fa-twitter {
 div.footer {
     text-align: end;
     opacity: .8;
+}
+
+/* スマホ用の画面幅設定 */
+@media screen and (max-width: 425px) {
+    body {
+        width: 95%;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+    }
 }
